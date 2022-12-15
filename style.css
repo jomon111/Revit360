@@ -1,0 +1,26 @@
+.centered {
+    height: 35px;
+    justify-content: center;
+    position: fixed;
+    bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 0px auto;
+    left: 0;
+    right: 0;
+}
+.btn--orange,
+a.btn--orange {
+    color: #fff;
+    background: #b79898;
+}
+.btn--orange:hover,
+a.btn--orange:hover {
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+}
+
+a.btn--radius {
+   border-radius: 10vh;
+}

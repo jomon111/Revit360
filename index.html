@@ -5,13 +5,34 @@
     <title>360&deg; Image</title>
     <meta name="description" content="360&deg; Image - A-Frame">
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./style.css"/>
   </head>
   <body>
     <a-scene>
-      <a-sky src="./image.jpg" rotation="0 0 0"></a-sky>
-
+      <a-sky id="mypic" src="./image.jpg" rotation="0 0 0"></a-sky>
       <a-text font="kelsonsans" value="Welcome to UEHARA design house" width="6" position="-2.5 0.25 -1.5"
               rotation="0 15 0"></a-text>
     </a-scene>
+    <div class="centered">
+      <button id="btn" onclick="change" class="btn btn--orange btn--radius">night view</button>
+    </div>
+    <script>
+      let PicArray = new Array("./image.jpg","./image2.jpg");
+      let TextArray = new Array("night view","daytime view")
+      let n = 0;
+
+      function change(){
+        if (n == 1) {
+          n = 0;
+          console.log("changed");
+        }
+        else {
+          n ++;
+          console.log("changed");
+        }
+        document.getElementById("mypic").src = PicArray[n];
+        document.getElementById("btn").textContent = TextArray[n];
+      }
+    </script>
   </body>
 </html>
