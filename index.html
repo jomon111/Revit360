@@ -14,24 +14,24 @@
               rotation="0 15 0"></a-text>
     </a-scene>
     <div class="centered">
-      <button id="btn" onclick="change" class="btn btn--orange btn--radius">night view</button>
+      <button type="button" id="btn" onclick="change()" class="btn btn--orange btn--radius">night view</button>
     </div>
     <script>
       let PicArray = new Array("./image.jpg","./image2.jpg");
-      let TextArray = new Array("night view","daytime view")
+      let TextArray = new Array("night view","daytime view");
       let n = 0;
 
       function change(){
         if (n == 1) {
           n = 0;
-          console.log("changed");
         }
         else {
           n ++;
-          console.log("changed");
         }
-        document.getElementById("mypic").src = PicArray[n];
-        document.getElementById("btn").textContent = TextArray[n];
+        let text = document.getElementById("btn").textContent = TextArray[n];
+        let sky = document.getElementById("mypic").getAttribute('src');
+        mypic.setAttribute('src',PicArray[n]);
+        console.log(sky);
       }
     </script>
   </body>

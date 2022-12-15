@@ -15,12 +15,4 @@ a.btn--orange {
     color: #fff;
     background: #b79898;
 }
-.btn--orange:hover,
-a.btn--orange:hover {
-    color: rgb(0, 0, 0);
-    background-color: #ffffff;
-}
 
-a.btn--radius {
-   border-radius: 10vh;
-}
